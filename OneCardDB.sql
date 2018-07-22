@@ -82,7 +82,7 @@ CREATE TABLE Subscriptions(
     subscriptionId INT PRIMARY KEY AUTO_INCREMENT,
     userId INT,
     FOREIGN KEY (userId) REFERENCES Users(userId),
-    notificationId INT,
-    FOREIGN KEY (notificationId) REFERENCES Notifications(notificationId),
+    notificationTypeId INT,
+    FOREIGN KEY (notificationTypeId) REFERENCES NotificationTypes(notificationTypeId),
     subscriptionStatus BIT DEFAULT 1
 )
